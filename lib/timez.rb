@@ -3,14 +3,15 @@ require 'timez/xml'
 require 'http'
 require 'json'
 
+$URL = "http://api.timezonedb.com"
+
 module Timez
   
   class << self
-    @url = "http://api.timezonedb.com"
 
     def get_time(time_zone, key)
-      response = HTTP.get(@url, :params => { :zone => time_zone, :key => key, :format => "json" }).to_s
-      hash = JSON[response]
+      response = HTTP.get($URL, :params => { :zone => time_zone, :key => key, :format => "json" }).to_s
+      JSON[response]
     end
 
     def get_time_utc(time_zone, key)

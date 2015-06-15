@@ -38,7 +38,7 @@ time = Timez::Location.get_time('LATITUDE', 'LONGITUDE', 'YOUR_API_KEY')
 
 **Get Time as XML,**
 ```ruby
-time = Timez::XML.get_time('Asia/Colombo', 'YOUR_API_KEY')
+time = Timez::Xml.get_time('Asia/Colombo', 'YOUR_API_KEY')
 ```
 
 

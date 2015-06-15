@@ -22,7 +22,7 @@ module Timez
     end
 
     def self.get_time_json(lat, lng, key)
-      hash = get_time(lat, lng, key)
+      get_time(lat, lng, key)
     end
   end
 end

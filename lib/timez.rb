@@ -30,7 +30,7 @@ module Timez
     end
 
     def get_time_json(time_zone, key)
-      hash = get_time(time_zone, key)
+      get_time(time_zone, key)
     end
   end
 end

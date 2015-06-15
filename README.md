@@ -1,8 +1,8 @@
 # Timez
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/timez`. To experiment with that code, run `bin/console` for an interactive prompt.
+Timez is the API implementation of timezonedb for Ruby. Can use to get World Clock from the time zone or location for the Ruby Applications by json or xml.
 
-TODO: Delete this and the text above, and describe your gem
+Timez gem use the power of [celluloid](https://github.com/celluloid/celluloid) for concurrent API requests.
 
 ## Installation
 
@@ -22,13 +22,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First of all Register on [timezonedb](http://timezonedb.com/register) to get your key to access the API.
 
-## Development
+Get Time by time zone,
+```ruby
+time = Timez.get_time('Asia/Colombo', 'YOUR_API_KEY')
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+Here is the time zone list, [time zone list](http://timezonedb.com/time-zones)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Get Time by location,
+```ruby
+time = Timez::Location.get_time('LATITUDE', 'LONGITUDE', 'YOUR_API_KEY')
+```
+
+Get Time as XML,
+```ruby
+time = Timez::XML.get_time('Asia/Colombo', 'YOUR_API_KEY')
+```
+
 
 ## Contributing
 
@@ -38,5 +50,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 =======
-# timez
-Celluloid+Ruby interface to the timezonedb API.
+
+---
+
+**Developer:** @[dilumnavanjana](https://github.com/dilumnavanjana)
+
+**Mentor:** @[digitalextremist](https://github.com/digitalextremist)

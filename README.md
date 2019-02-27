@@ -52,6 +52,6 @@ time = Timez::Xml.get_time('Asia/Colombo', 'YOUR_API_KEY')
 
 ---
 
-**Developer:** @[dilumnavanjana](https://github.com/dilumnavanjana)
+**Developer:** @[dilumn](https://github.com/dilumn)
 
 **Mentor:** @[digitalextremist](https://github.com/digitalextremist)
